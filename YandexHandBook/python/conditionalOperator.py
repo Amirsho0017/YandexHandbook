@@ -1,4 +1,82 @@
 import math
+
+# P
+petya, vasya, tolya = int(input()), int(input()), int(input())
+
+lia = sorted([petya, vasya, tolya])
+fir = lia[2]
+sec = lia[1]
+thir = lia[0]
+
+if fir == petya:
+    name1 = 'Петя'
+elif fir == vasya:
+    name1 = 'Вася'
+else:
+    name1 = 'Толя'
+
+if sec == petya:
+    name2 = 'Петя'
+elif sec == vasya:
+    name2 = 'Вася'
+else:
+    name2 = 'Толя'
+
+if thir == petya:
+    name3 = 'Петя'
+elif thir == vasya:
+    name3 = 'Вася'
+else:
+    name3 = 'Толя'
+
+print('          ' + name1 + '        ')
+print('  ' + name2 + '                ')
+print('                  ' + name3 + '')
+print('   II      I      III  ')
+
+
+
+#S
+X, Y = float(input()), float(input())
+
+oceanX1 = 10
+oceanY1 = 10
+oceanX2 = -10
+oceanY2 = -10
+
+dangerZoneY1 = 5.25
+dangerZoneX1 = 5.25
+dangerZoneY2 = -9
+dangerZoneX2 = -7.25
+radius = 10
+
+
+if X**2 + Y**2 <= radius**2:
+    print('Зона безопасна. Продолжайте работу.')
+else:
+    print('Вы вышли в море и рискуете быть съеденным акулой!')
+
+# print('Опасность! Покиньте зону как можно скорее!')
+
+
+
+#T
+st1 = input()
+st2 = input()
+st3 = input()
+lis = []
+
+if 'зайка' in st1:
+    lis.append(st1)
+
+if 'зайка' in st2:
+    lis.append(st2)
+
+if 'зайка' in st3:
+    lis.append(st3)
+
+
+print(min(lis), len(min(lis)))
 # R
 a = int(input())
 b = int(input())
@@ -42,10 +120,6 @@ else:
     else:
         print("No solution")
 
-
-
-
-# P TODO
 
 # O
 f_num = input()

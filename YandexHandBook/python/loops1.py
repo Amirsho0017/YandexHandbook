@@ -1,3 +1,51 @@
+#N
+
+
+#M
+n = int(input())
+players = []
+k = 0
+while k < n:
+    players.append(input())
+    k += 1
+
+print(min(players))
+
+#L
+n = input()
+
+max1 = n[0]
+for i in n:
+    if max1 < i:
+        max1 = i
+
+print(max1)
+
+#K
+n = input()
+s = 0
+for i in n:
+    s += int(i)
+
+print(s)
+
+
+#J
+x = 0
+y = 0
+while (direction := input()) != "СТОП":
+    step = int(input())
+    if direction == "СЕВЕР":
+        y += step
+    elif direction == "ЗАПАД":
+        x -= step
+    elif direction == "ВОСТОК":
+        x += step
+    elif direction == "ЮГ":
+        y -= step
+
+print(x, y, sep='\n')
+
 #I
 n = int(input())
 

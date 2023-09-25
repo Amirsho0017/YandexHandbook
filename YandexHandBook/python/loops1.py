@@ -1,5 +1,34 @@
-#N
+#P
+text = input()
 
+rev_text = text[::-1]
+
+if rev_text == text:
+    print('YES')
+else:
+    print('NO')
+
+
+#Q
+number = input()
+
+res = []
+for i in number:
+    if int(i) % 2 == 0:
+        res.append(i)
+print(''.join(res))
+
+#O
+number = int(input())
+
+k = 0
+p = 0
+while (k < number):
+    text = input()
+    k += 1
+    if "зайка" in text:
+        p += 1
+print(p)    
 
 #M
 n = int(input())

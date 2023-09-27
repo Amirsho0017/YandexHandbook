@@ -1,2 +1,2 @@
 # leet-code
-This is where I will post my solved problems.
+Here I will post my solved problems.

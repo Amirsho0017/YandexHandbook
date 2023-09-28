@@ -1,3 +1,48 @@
+# I
+n = int(input())
+k = 0
+le = []
+while k < n:
+    k += 1
+    num = str(input())
+    maxi = num[0]
+    for i in num:
+        if maxi < i:
+            maxi = i
+    le.append(maxi)
+print(''.join(le))
+
+# H
+q = int(input())
+k = 0
+le = []
+maximum = 0
+winner = ""
+while k < q:
+    k += 1
+    name = input()
+    number = input()
+    s = 0
+    for i in number:
+        s += int(i)
+    le.append(s)
+    if maximum <= s:
+        maximum = s
+        winner = name
+
+print(winner)
+
+
+# G
+num = int(input())
+start_sec = 3
+participant = 1
+while participant <= num:
+    for i in range(start_sec, 0, -1):
+        print(f"До старта {i} секунд(ы)")
+    print(f"Старт {participant}!!!")
+    participant += 1
+    start_sec += 1
 
 # E
 quan = int(input())

@@ -1,3 +1,17 @@
+# I
+n = int(input())
+k = 0
+le = []
+while k < n:
+    k += 1
+    num = str(input())
+    maxi = num[0]
+    for i in num:
+        if maxi < i:
+            maxi = i
+    le.append(maxi)
+print(''.join(le))
+
 # H
 q = int(input())
 k = 0

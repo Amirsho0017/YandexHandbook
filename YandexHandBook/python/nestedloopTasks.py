@@ -1,3 +1,50 @@
+# Q palindrome
+n = int(input())
+k = 0
+nums = []
+li = 0
+while k < n:
+    k += 1
+    nums.append(str(input()))
+for i in nums:
+    if i == i[::-1]:
+        li += 1
+print(li)
+
+# M
+n, m = int(input()), int(input())
+
+max_value = n * m
+
+column_width = len(str(max_value))
+
+for i in range(1, n + 1):
+    row = []
+    for j in range(1, m + 1):
+        num = i + (j - 1) * n
+        formatted_num = str(num).rjust(column_width)
+        row.append(formatted_num)
+    print(' '.join(row))
+
+
+# L
+n, m = int(input()), int(input())
+max_width = len(str(n * m))
+
+li = []
+k = 0
+
+for i in range(1, n * m + 1):
+    if k < m:
+        li.append(f'{i:>{max_width}}')
+        k += 1
+    else:
+        print(' '.join(li))
+        k = 1
+        li = [f'{i:>{max_width}}']
+
+print(' '.join(li))
+
 # I
 n = int(input())
 k = 0

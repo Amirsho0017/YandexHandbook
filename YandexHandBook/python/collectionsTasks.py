@@ -1,5 +1,27 @@
-#F
 
+#H
+n = int(input())
+k = 0
+while k < n:
+    k += 1
+    text = input()
+    if 'зайка' in text:
+        print(text.index('зайка') + 1)
+    else:
+        print('Заек нет =(')
+
+#G
+print('end')
+numbers = input()
+print(sum(map(int, numbers.split(" "))))
+#F
+q = int(input())
+k = 0
+le = 0
+while le < q:
+    le += 1
+    k += input().count("зайка")
+print(k)
 
 #E
 text = input()

@@ -1,3 +1,30 @@
+# R
+text = input()
+li = []
+counter = 0
+num = text[0]
+for index, i in enumerate(text):
+    if num == i:
+        counter += 1
+        if index + 1 == len(text):
+            li.append([text[index], str(counter)])
+    else:
+        li.append([text[index - 1], str(counter)])
+        num = i
+        counter = 1
+        if index + 1 == len(text):
+            li.append([text[index], "1"])
+
+for i in li:
+    print(' '.join(i))
+
+# Q
+text = input().lower().replace(' ', '')
+if text == text[::-1]:
+    print("YES")
+else:
+    print("NO")
+
 # N
 numbers = input()
 deg = int(input())

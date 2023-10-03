@@ -10,3 +10,16 @@ peculiarities:
  - object-oriented (also supports procedure oriented)
  - expandable (can use part of code in another PL)
  - many libraries
+
+numbers:
+    - int: 2, 3, 5, ...
+    - float: 2.5, 2.999, ...
+    - complex: (-5+4j), (2.3 - 4.6j)
+
+strings are not changeable
+
+Замечание для программистов в объектно-ориентированном стиле
+Python строго объектно ориентирован в том смысле, что объектом является всё, включая
+числа, строки и функции.
+
+global and nonlocal variables

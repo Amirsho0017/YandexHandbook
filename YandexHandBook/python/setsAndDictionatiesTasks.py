@@ -1,24 +1,22 @@
 # F
-# num1 = int(input())
-# num2 = int(input())
-# set1 = set()
-# set2 = set()
-#
-# k = 0
-# while k < num1:
-#     k += 1
-#     set1.add(input())
-#
-# k = 0
-# while k < num2:
-#     k += 1
-#     set2.add(input())
-#
-# if len(set1 ^ set2) == 0:
-#     print('Таких нет')
-# else:
-#     print('\n'.join(sorted(set1 ^ set2)))
+num1 = int(input())
+num2 = int(input())
+set1 = set()
+set2 = set()
 
+k = 0
+while k < num1 + num2:
+    k += 1
+    a = input()
+    if a not in set1:
+        set1.add(a)
+    else:
+        set2.add(a)
+
+if len(set1 ^ set2) == 0:
+    print('Таких нет')
+else:
+    print('\n'.join(sorted(set1 ^ set2)))
 
 # E
 num1 = int(input())
@@ -30,16 +28,11 @@ k = 0
 while k < num1 + num2:
     k += 1
     a = input()
-    set1.add(a)
+    if a not in set1:
+        set1.add(a)
+    else:
+        set2.add(a)
 
-    set1.add(input())
-
-k = 0
-while k < num2:
-    k += 1
-    set2.add(input())
-
-print(set1, set2)
 if len(set1 ^ set2) == 0:
     print('Таких нет')
 else:

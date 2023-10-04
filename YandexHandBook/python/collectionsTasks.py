@@ -1,3 +1,25 @@
+# T
+
+
+# S
+text = input().split(' ')
+operators = ['*', '+', '/', '-']
+stack = []
+for i in text:
+    if i not in operators:
+        stack.append(int(i))
+    elif i == operators[0]:
+        stack.append(stack.pop() * stack.pop())
+    elif i == operators[1]:
+        stack.append(stack.pop() + stack.pop())
+    elif i == operators[2]:
+        stack.append(stack.pop() / stack.pop())
+    elif i == operators[3]:
+        stack.append((stack.pop() - stack.pop()) * -1)
+
+print(stack[0])
+
+
 # R
 text = input()
 li = []

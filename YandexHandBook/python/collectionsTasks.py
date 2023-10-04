@@ -1,5 +1,50 @@
-# T
+# I
+li = []
+while (text := input()) != '':
+    if text[0] == "#":
+        continue
+    elif "#" in text:
+        li.append(text[:text.index('#')])
+    else:
+        li.append(text)
 
+print('\n'.join(li))
+
+# T
+operators = ['*', '+', '/', '-', '#', '@', '~', '!']
+stack = []
+for i in input().split(' '):
+    if i not in operators:
+        stack.append(int(i))
+    elif i == operators[0]:
+        stack.append(stack.pop() * stack.pop())
+    elif i == operators[1]:
+        stack.append(stack.pop() + stack.pop())
+    elif i == operators[2]:
+        val1 = stack.pop()
+        val2 = stack.pop()
+        stack.append(val2 // val1)
+    elif i == operators[3]:
+        stack.append((stack.pop() - stack.pop()) * -1)
+    elif i == operators[4]:
+        stack.append(stack[-1])
+    elif i == operators[5]:
+        val3 = stack.pop()
+        val2 = stack.pop()
+        val1 = stack.pop()
+        stack.append(val2)
+        stack.append(val3)
+        stack.append(val1)
+    elif i == operators[6]:
+        stack.append(stack.pop() * -1)
+    elif i == operators[7]:
+        val = stack.pop()
+        s = 1
+        for j in range(1, val + 1):
+            s *= j
+        stack.append(s)
+
+print(stack[0])
 
 # S
 text = input().split(' ')

@@ -59,7 +59,6 @@ if len(set1 & set2) == 0:
 else:
     print(len(set1 & set2))
 
-
 # C
 k = 0
 num = int(input())

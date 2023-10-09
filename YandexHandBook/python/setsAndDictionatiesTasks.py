@@ -1,3 +1,50 @@
+# H
+num = int(input())
+names = dict()
+
+for i in range(num):
+    text = input().split(' ')
+    names[text[0]] = text[1:]
+
+type2 = input()
+lis = []
+for key, val in names.items():
+    if type2 in val:
+        lis.append(key)
+
+if len(lis) == 0:
+    print('Таких нет')
+else:
+    print('\n'.join(sorted(lis)))
+
+
+# G
+dic = {'A': '.-', 'B': '-...', 'C': '-.-.',
+       'D': '-..', 'E': '.', 'F': '..-.',
+       'G': '--.', 'H': '....', 'I': '..',
+       'J': '.---', 'K': '-.-', 'L': '.-..',
+       'M': '--', 'N': '-.', 'O': '---',
+       'P': '.--.', 'Q': '--.-', 'R': '.-.',
+       'S': '...', 'T': '-', 'U': '..-',
+       'V': '...-', 'W': '.--', 'X': '-..-',
+       'Y': '-.--', 'Z': '--..',
+       '0': '-----', '1': '.----', '2': '..---',
+       '3': '...--', '4': '....-', '5': '.....',
+       '6': '-....', '7': '--...', '8': '---..',
+       '9': '----.'}
+
+text = input()
+s = ''
+for index, i in enumerate(text):
+    print(i)
+    if i == ' ':
+        s = ''
+    else:
+        s += dic[i.upper()] + ' '
+        if index + 1 == len(text):
+            print(s)
+
+
 # F
 num1 = int(input())
 num2 = int(input())

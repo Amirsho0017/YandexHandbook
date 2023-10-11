@@ -1,4 +1,85 @@
+# K
+num = int(input())
+di = dict()
+q = 0
+for i in range(num):
+    text = input()
+    if text not in di:
+        di[text] = 1
+    else:
+        di[text] += 1
+
+for i in di.values():
+    if i > 1:
+        q += i
+
+print(q)
+
+# J
+d = {
+    "А": "A",
+    "Б": "B",
+    "В": "V",
+    "Г": "G",
+    "Д": "D",
+    "Е": "E",
+    "Ё": "E",
+    "Ж": "ZH",
+    "З": "Z",
+    "И": "I",
+    "Й": "I",
+    "К": "K",
+    "Л": "L",
+    "М": "M",
+    "Н": "N",
+    "О": "O",
+    "П": "P",
+    "Р": "R",
+    "С": "S",
+    "Т": "T",
+    "У": "U",
+    "Ф": "F",
+    "Х": "KH",
+    "Ц": "TC",
+    "Ч": "CH",
+    "Ш": "SH",
+    "Щ": "SHCH",
+    "Ы": "Y",
+    "Э": "E",
+    "Ю": "IU",
+    "Ь": "",
+    "Ъ": "",
+    "Я": "IA",
+}
+
+text = input()
+result = ""
+
+for letter in text:
+    if letter.upper() in d:
+        if letter.isupper():
+            print(letter)
+            result += d[letter.upper()].capitalize()
+            print(result)
+        else:
+            result += d[letter.upper()].lower()
+    else:
+        result += letter
+
+print(result)
+
+
 # I
+di = dict()
+while (text := input()) != '':
+    for i in text.split(' '):
+        if i not in di:
+            di[i] = 1
+        else:
+            di[i] += 1
+
+for key, val in di.items():
+    print(key, val)
 
 # H
 num = int(input())
@@ -18,7 +99,6 @@ if len(lis) == 0:
     print('Таких нет')
 else:
     print('\n'.join(sorted(lis)))
-
 
 # G
 dic = {'A': '.-', 'B': '-...', 'C': '-.-.',
@@ -45,7 +125,6 @@ for index, i in enumerate(text):
         s += dic[i.upper()] + ' '
         if index + 1 == len(text):
             print(s)
-
 
 # F
 num1 = int(input())

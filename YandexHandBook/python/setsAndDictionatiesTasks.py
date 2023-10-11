@@ -1,3 +1,19 @@
+# K
+num = int(input())
+di = dict()
+q = 0
+for i in range(num):
+    text = input()
+    if text not in di:
+        di[text] = 1
+    else:
+        di[text] += 1
+
+for i in di.values():
+    if i > 1:
+        q += i
+
+print(q)
 
 # J
 d = {

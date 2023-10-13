@@ -1,3 +1,27 @@
+# L
+
+num = int(input())
+di = {}
+q = 0
+li = []
+for i in range(num):
+    text = input()
+    if text in di:
+        di[text] += 1
+    else:
+        di[text] = 1
+
+for key, val in di.items():
+    if val > 1:
+        li.append(f"{key} - {val}")
+        q += 1
+
+li = sorted(li)
+if q == 0:
+    print('Однофамильцев нет')
+else:
+    print('\n'.join(li))
+
 # K
 num = int(input())
 di = dict()

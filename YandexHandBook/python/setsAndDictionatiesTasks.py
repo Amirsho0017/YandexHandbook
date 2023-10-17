@@ -43,7 +43,7 @@ if len(res) == 0:
 else:
     print('\n'.join(res))
 
-
+# L
 num = int(input())
 di = {}
 q = 0

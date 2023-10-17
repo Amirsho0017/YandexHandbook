@@ -1,3 +1,71 @@
+# N
+products = set()
+for _ in range(int(input())):
+    products.add(input())
+foods_with_ingredients = {}
+for _ in range(int(input())):
+    name_of_food = input()
+    foods_with_ingredients[name_of_food] = set()
+    for _ in range(int(input())):
+        foods_with_ingredients[name_of_food].add(input())
+res = []
+for key, val in foods_with_ingredients.items():
+    if val <= products:
+        res.append(key)
+
+res = sorted(res)
+if len(res) == 0:
+    print('Готовить нечего')
+else:
+    print('\n'.join(res))
+
+# M
+quantity_of_foods = int(input())
+food_counter = 0
+list_of_foods = set()
+list_of_prepared_foods = set()
+while food_counter < quantity_of_foods:
+    food_counter += 1
+    list_of_foods.add(input())
+
+days = int(input())
+day_counter = 0
+while day_counter < days:
+    day_counter += 1
+    quantity_of_prepared_foods = int(input())
+    quantity_of_prepared_foods_counter = 0
+    while quantity_of_prepared_foods_counter < quantity_of_prepared_foods:
+        quantity_of_prepared_foods_counter += 1
+        list_of_prepared_foods.add(input())
+res = sorted(list_of_foods - list_of_prepared_foods)
+if len(res) == 0:
+    print('Готовить нечего')
+else:
+    print('\n'.join(res))
+
+
+num = int(input())
+di = {}
+q = 0
+li = []
+for i in range(num):
+    text = input()
+    if text in di:
+        di[text] += 1
+    else:
+        di[text] = 1
+
+for key, val in di.items():
+    if val > 1:
+        li.append(f"{key} - {val}")
+        q += 1
+
+li = sorted(li)
+if q == 0:
+    print('Однофамильцев нет')
+else:
+    print('\n'.join(li))
+
 # K
 num = int(input())
 di = dict()

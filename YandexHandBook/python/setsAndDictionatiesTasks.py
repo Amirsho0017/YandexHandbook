@@ -3,17 +3,14 @@ li = []
 se = set()
 while (text := input()) != '':
     things = text.split(' ')
-    for i in things:
-        if 'зайка' == i:
-            print(things)
-            print(things.index(i))
-            if things.index(i) != 0:
-                se.add(things[things.index(i) - 1])
-                print(se)
-            if things.index(i) + 1 != len(things):
-                se.add(things[things.index(i) + 1])
-                print(se)
-print(se)
+    for key, val in enumerate(things):
+        if 'зайка' == val:
+            if key != 0:
+                se.add(things[key - 1])
+            if key + 1 != len(things):
+                se.add(things[key + 1])
+print('\n'.join(se))
+
 # N
 products = set()
 for _ in range(int(input())):

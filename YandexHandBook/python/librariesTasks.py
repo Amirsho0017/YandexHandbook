@@ -5,10 +5,11 @@ from itertools import cycle
 from itertools import islice
 from itertools import product
 
-# J
+# J TODO //
+num = int(input())
+print(list(combinations(range(1, num + 1), 3)))
 
-
-# I
+# TODO I
 num = int(input())
 print(list(product(range(1, num + 1), range(1, num + 1))))
 

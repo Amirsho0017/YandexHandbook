@@ -1,0 +1,24 @@
+[
+  {
+    "last_name": "Иванов",
+    "first_name": "Иван",
+    "patronymic": "Иванович",
+    "date_of_birth": "01.01.2001",
+    "group_number": 1,
+    "phone_numbers": [
+      "+7 111 111 1111",
+      "+7 111 111 1112"
+    ]
+  },
+  {
+    "last_name": "Петров",
+    "first_name": "Пётр",
+    "patronymic": "Петрович",
+    "date_of_birth": "10.10.2001",
+    "group_number": 2,
+    "phone_numbers": [
+      "+7 111 111 1113",
+      "+7 111 111 1114"
+    ]
+  }
+]

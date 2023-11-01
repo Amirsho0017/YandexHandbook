@@ -1,5 +1,15 @@
 from sys import stdin
 
+# F
+lines = []
+for line in stdin:
+    for word in line.split(' '):
+        word = word.strip()
+        if word.lower() == word[::-1].lower():
+            if word not in lines:
+                lines.append(word)
+print('\n'.join(sorted(lines)))
+
 # D
 lines = []
 for line in stdin:

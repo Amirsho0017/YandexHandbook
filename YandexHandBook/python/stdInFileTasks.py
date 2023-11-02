@@ -1,5 +1,22 @@
 from sys import stdin
 
+# G
+numbers = []
+with open(input(), encoding='UTF-8') as input_txt:
+    text = input_txt.read().strip('\n')
+
+res = []
+for i in text.split('\n'):
+    for j in i.split(' '):
+        numbers.append(int(j))
+res.append(str(len(numbers)))
+res.append(str(sum(1 for i in numbers if i > 0)))
+res.append(str(min(numbers)))
+res.append(str(max(numbers)))
+res.append(str(sum(numbers)))
+res.append(str(round(sum(numbers) / len(numbers), 2)))
+print('\n'.join(res))
+
 # F
 lines = []
 for line in stdin:

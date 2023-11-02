@@ -1,3 +1,46 @@
+# I
+def is_prime(num):
+    if num <= 1:
+        return False
+    elif num == 2:
+        return True
+    elif num % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(num**0.5) + 1, 2):
+            if num % i == 0:
+                return False
+        return True
+
+
+# G
+def can_eat(first_pos, second_pos) -> bool:
+    check_1 = ((first_pos[0] + 2 == second_pos[0]) and (first_pos[1] + 1 == second_pos[1]))
+    check_2 = ((first_pos[0] - 2 == second_pos[0]) and (first_pos[1] - 1 == second_pos[1]))
+    check_3 = ((first_pos[0] + 1 == second_pos[0]) and (first_pos[1] + 2 == second_pos[1]))
+    check_4 = ((first_pos[0] - 1 == second_pos[0]) and (first_pos[1] - 2 == second_pos[1]))
+    check_5 = ((first_pos[0] - 1 == second_pos[0]) and (first_pos[1] + 2 == second_pos[1]))
+    check_6 = ((first_pos[0] + 1 == second_pos[0]) and (first_pos[1] - 2 == second_pos[1]))
+    check_7 = ((first_pos[0] - 2 == second_pos[0]) and (first_pos[1] + 1 == second_pos[1]))
+    check_8 = ((first_pos[0] + 2 == second_pos[0]) and (first_pos[1] - 1 == second_pos[1]))
+
+    if check_1 or check_2 or check_3 or check_4 or check_5 or check_6 or check_7 or check_8:
+        return True
+    else:
+        return False
+
+
+def can_eat(first_pos, second_pos) -> bool:
+    move_offsets = [(2, 1), (-2, -1), (1, 2), (-1, -2), (-1, 2), (1, -2), (-2, 1), (2, -1)]
+    return any((
+                       first_pos[0] + offset[0] == second_pos[0]
+                       and first_pos[1] + offset[1] == second_pos[1]
+               ) for offset in move_offsets)
+
+
+print(can_eat((1, 1), (3, 2)))
+
+
 # C
 def number_length(number):
     if number < 0:
@@ -16,4 +59,3 @@ def gcd(a, b):
 # A
 def print_hello(string):
     print('Hello, ' + string + '!')
-

@@ -1,3 +1,40 @@
+# gdc 2.0
+def gcd(*args):
+    if len(args) == 1:
+        return args[0]
+    if sum(args) / len(args) == args[0]:
+        return args[0]
+    else:
+        length = len(args)
+        a = args[0]
+        for i in range(1, length):
+            b = args[i]
+            while b != 0:
+                a, b = b, a % b
+    return a
+
+
+print(gcd(36, 48, 156, 100500))
+# MatrixGenerator
+def make_matrix(size, value=0):
+    if isinstance(size, int):
+        return [[value] * size for _ in range(size)]
+    else:
+        return [[value] * size[0] for _ in range(size[1])]
+
+
+print(make_matrix((4, 2), 1))
+print(make_matrix(3))
+
+
+# ListGenerator
+def make_list(length, value=0):
+    return [value for _ in range(length)]
+
+
+# print(make_list(5, 1))
+
+
 # I
 def is_prime(num):
     if num <= 1:
@@ -38,7 +75,7 @@ def can_eat(first_pos, second_pos) -> bool:
                ) for offset in move_offsets)
 
 
-print(can_eat((1, 1), (3, 2)))
+# print(can_eat((1, 1), (3, 2)))
 
 
 # C

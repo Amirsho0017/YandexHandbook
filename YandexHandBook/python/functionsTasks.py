@@ -1,3 +1,20 @@
+# gdc 2.0
+def gcd(*args):
+    if len(args) == 1:
+        return args[0]
+    if sum(args) / len(args) == args[0]:
+        return args[0]
+    else:
+        length = len(args)
+        a = args[0]
+        for i in range(1, length):
+            b = args[i]
+            while b != 0:
+                a, b = b, a % b
+    return a
+
+
+print(gcd(36, 48, 156, 100500))
 # MatrixGenerator
 def make_matrix(size, value=0):
     if isinstance(size, int):

@@ -1,3 +1,14 @@
+# data preparing
+def to_string(*values, sep=' ', end='\n'):
+    s = str()
+    for k, i in enumerate(values):
+        if k != len(values) - 1:
+            s += str(i) + sep
+        else:
+            s += str(i) + end
+    return s
+
+
 # gdc 2.0
 def gcd(*args):
     if len(args) == 1:
@@ -14,17 +25,12 @@ def gcd(*args):
     return a
 
 
-print(gcd(36, 48, 156, 100500))
 # MatrixGenerator
 def make_matrix(size, value=0):
     if isinstance(size, int):
         return [[value] * size for _ in range(size)]
     else:
         return [[value] * size[0] for _ in range(size[1])]
-
-
-print(make_matrix((4, 2), 1))
-print(make_matrix(3))
 
 
 # ListGenerator

@@ -1,3 +1,5 @@
+
+
 # data preparing
 def to_string(*values, sep=' ', end='\n'):
     s = str()

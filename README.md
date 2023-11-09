@@ -1,2 +1,2 @@
-# leet-code
-Here I will post my solved problems.
+# Yandex Handbook
+Here I will post all solved tasks from Yandex Handbook.

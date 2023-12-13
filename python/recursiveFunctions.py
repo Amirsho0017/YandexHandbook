@@ -1,6 +1,6 @@
+from functools import lru_cache
 from sys import setrecursionlimit
 from timeit import timeit
-from functools import lru_cache
 
 
 @lru_cache(maxsize=1000)
@@ -45,11 +45,11 @@ def fib(n):
     return cash[n]
 
 
-
 count = 0
 cash = {0: 1, 1: 1}
 print(f"Среднее время вычисления: "
       f"{round(timeit('fib(35)', number=10, globals=globals()) / 10, 6)} с.")
+
 
 def fib(n):
     global count
@@ -64,6 +64,7 @@ cash = {0: 1, 1: 1}
 print(f"35-е число Фибоначчи равно: {fib(35)}.")
 print(f"Количество вызовов рекурсивной функции равно: {count}.")
 
+
 def fib(n):
     global count
     count += 1
@@ -76,6 +77,7 @@ count = 0
 print(f"35-е число Фибоначчи равно: {fib(35)}.")
 print(f"Количество вызовов рекурсивной функции равно: {count}.")
 
+
 def fib(n):
     f_1, f = 1, 1
     for i in range(n - 1):
@@ -85,6 +87,7 @@ def fib(n):
 
 print(f"Среднее время вычисления: "
       f"{round(timeit('fib(35)', number=10, globals=globals()) / 10, 3)} с.")
+
 
 def fib(n):
     if n in (0, 1):

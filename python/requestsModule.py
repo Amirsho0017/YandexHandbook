@@ -2,8 +2,8 @@ from requests_oauthlib import OAuth2Session
 from requests import get, post, put, delete
 
 
-client_id = "fbb376be8e5a4067bd67eda8150576f8"
-client_secret = "476cef73eb9c48759b23cb1091c3e467"
+client_id = "d76128ef60a8494a9a87fdd590c4856f"
+client_secret = "5602828312d64ba8938ee292b7b7cb42"
 auth_url = "https://oauth.yandex.ru/authorize"
 token_url = "https://oauth.yandex.ru/token"
 oauth = OAuth2Session(client_id=client_id)

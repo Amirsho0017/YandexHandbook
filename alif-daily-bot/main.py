@@ -7,7 +7,9 @@ bot = telebot.TeleBot(daily_bot_token)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    print(message)
+    bot.reply_to(
+        message, message.text
+    )
 
 
 if __name__ == "__main__":

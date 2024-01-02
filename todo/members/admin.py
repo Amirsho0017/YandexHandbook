@@ -3,7 +3,7 @@ from .models import Member
 
 
 class MemberAdmin(admin.ModelAdmin):
-    list_display = ('firstName', 'secondName', 'joinedDate')
+   list_display = ('firstName', 'secondName', 'joinedDate')
 
 
 # Register your models here.

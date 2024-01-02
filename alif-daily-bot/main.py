@@ -91,7 +91,7 @@ def handle_user_response(message):
     elif len(user_responses[user_id]) == 2:
         bot.send_message(user_id, "Какие сложности возникли?")
     elif len(user_responses[user_id]) == 3:
-        bot.send_message(user_id, "Ваши ответы отправлены в нужную группу. \nПродуктивного дня Вам.🥰")
+        bot.send_message(user_id, "Ваши ответы отправлены в нужную группу. \nПродуктивного дня Вам.")
         formatted_table = format_responses(user_responses[user_id])
         report_text = f'''Ежедневный отчет от {user_name_link}\n{formatted_date}
                 {formatted_table}'''

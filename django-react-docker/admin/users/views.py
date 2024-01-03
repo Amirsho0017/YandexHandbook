@@ -2,6 +2,7 @@ from rest_framework import exceptions
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+from .authentications import generate_token
 from .models import User
 from .serializers import UserSerializer
 
@@ -24,3 +25,27 @@ def users(request):
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
+
+
+@api_view(['POST'])
+def login(request):
+    email = request.data.get('email')
+    password = request.data.get('password')
+
+    user = User.objects.filter(email=email).first()
+
+    if user is None:
+        raise exceptions.AuthenticationFailed('User not found!')
+
+    if not user.check_password(password):
+        raise exceptions.AuthenticationFailed('Incorrect password!')
+
+    response = Response()
+    token = generate_token(user)
+    response.set_cookie(key='jwt', value=token, httponly=True)
+
+    response.data = {
+        'jwt': token
+    }
+
+    return response

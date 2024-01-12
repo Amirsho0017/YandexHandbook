@@ -128,7 +128,7 @@ class RoleViewSet(viewsets.ViewSet):
             'data': serializer.data
         }, status=status.HTTP_202_ACCEPTED)
 
-    def destroy(self, request, pk=None):
+    def destroy(self, pk=None):
         role = Role.objects.get(id=pk)
         role.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

@@ -103,7 +103,7 @@ def send_message(message):
 
     bot.send_message(message.from_user.id, "Ваши ответы отправлены в нужную группу. \nПродуктивного дня Вам.",
                      reply_markup=markup)
-
+    set_report(message.from_user.id)
     with bot.retrieve_data(message.from_user.id, message.chat.id) as response:
         forwardDifficulties(response['difficulties'], user_name_link)
 
@@ -122,7 +122,7 @@ def forwardDifficulties(text, user_name_link):
                          f"Y {user_name_link} возникли следующие сложности: \n "
                          f"{separator}\n {text}"
                          f"\n{separator}\n"
-                         f"Аки {manager_name_link} нуждемся в вашей помощи",
+                         f"Аки {manager_name_link} нуждемся в вашей помощи))",
                          parse_mode='HTML')
 
 
